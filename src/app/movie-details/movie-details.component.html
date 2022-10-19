@@ -1,0 +1,9 @@
+<div *ngIf="movie !== undefined">
+  <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="poster">
+  <p>{{ movie.title }}</p>
+  <p>{{ productors }}</p>
+  <p>{{ genres }}</p>
+  <p>{{movie.vote_average}}</p>
+  <p>{{movie.overview}}</p>
+</div>
+<!-- <h1>Hello World</h1> -->
