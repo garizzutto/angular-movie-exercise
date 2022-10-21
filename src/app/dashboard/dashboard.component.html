@@ -1,7 +1,7 @@
 <div>
-  <div>Box Office</div>
+  <div class="titles">Box Office</div>
   <app-movie-list [movies]="moviesBox"></app-movie-list>
-  <div>Action Movies</div>
+  <div class="titles">{{ currentCategory.name | uppercase }} MOVIES</div>
   <app-movie-list [movies]="actionMovies"></app-movie-list>
   <!-- <app-movie-list [movies]="movies"></app-movie-list> -->
 </div>

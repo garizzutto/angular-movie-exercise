@@ -1,3 +1,7 @@
-<div class="movie-list">
-  <app-movie-list-item *ngFor="let movie of movies" [movie]="movie"></app-movie-list-item>
+<div #component class="movie-list-container">
+  <button (click)="scrollToRight(component)"><i class="fa-solid fa-angle-left"></i></button>
+  <div class="movie-list">
+    <app-movie-list-item *ngFor="let movie of movies" [movie]="movie"></app-movie-list-item>
+  </div>
+  <button (click)="scrollToLeft(component)" class="right"><i class="fa-solid fa-angle-right"></i></button>
 </div>

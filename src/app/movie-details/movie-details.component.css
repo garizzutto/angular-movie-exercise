@@ -1,0 +1,31 @@
+.first-block {
+  display: flex;
+  background-color: #1A1A1A;
+  padding: 10px;
+}
+
+img {
+  margin-right: 10px;
+}
+
+.description {
+  color: #848484;
+}
+
+.texts {
+  margin-top: 20px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  color: #F9BE03;
+}
+
+i {
+  margin: 2px;
+}
+
+.second-block {
+  margin-left: 10px;
+}

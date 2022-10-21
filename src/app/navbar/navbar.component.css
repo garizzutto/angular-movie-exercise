@@ -1,0 +1,13 @@
+.nav-bar {
+  color: #CC7B19;
+  background-color: #121212;
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 25px;
+}
+
+a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: inherit;
+}

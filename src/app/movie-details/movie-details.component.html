@@ -1,9 +1,21 @@
-<div *ngIf="movie !== undefined">
-  <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="poster">
-  <p>{{ movie.title }}</p>
-  <p>{{ productors }}</p>
-  <p>{{ genres }}</p>
-  <p>{{movie.vote_average}}</p>
-  <p>{{movie.overview}}</p>
+<div *ngIf="movie !== undefined" class="container">
+  <div class="first-block">
+    <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="poster">
+    <div class="texts">
+      <h1>{{ movie.title }}</h1>
+      <h2 class="description">{{ movie.tagline }}</h2>
+      <p><span class="description">Production Company </span> <span>{{ productors }}</span></p>
+      <p><span class="description">Genres </span> <span>{{ genres }}</span></p>
+      <div class="rating">
+        <i class="{{ (movie.vote_average)/2 > 1 ? 'fa fa-star' : (movie.vote_average)/2 > 0 ? 'fa-solid fa-star-half-stroke' : 'fa-star fa-regular'}}" (click)="newRating(1)"></i>
+        <i class="{{ (movie.vote_average)/2 > 2 ? 'fa fa-star' : (movie.vote_average)/2 > 1 ? 'fa-solid fa-star-half-stroke' : 'fa-star fa-regular'}}" (click)="newRating(2)"></i>
+        <i class="{{ (movie.vote_average)/2 > 3 ? 'fa fa-star' : (movie.vote_average)/2 > 2 ? 'fa-solid fa-star-half-stroke' : 'fa-star fa-regular'}}" (click)="newRating(3)"></i>
+        <i class="{{ (movie.vote_average)/2 > 4 ? 'fa fa-star' : (movie.vote_average)/2 > 3 ? 'fa-solid fa-star-half-stroke' : 'fa-star fa-regular'}}" (click)="newRating(4)"></i>
+        <i class="{{ (movie.vote_average)/2 === 5 ? 'fa fa-star' : (movie.vote_average)/2 > 4 ? 'fa-solid fa-star-half-stroke' : 'fa-star fa-regular'}}" (click)="newRating(5)"></i>
+      </div>
+      <!-- <p>{{movie.vote_average}}</p> -->
+    </div>
+  </div>
+  <p class="second-block">{{movie.overview}}</p>
 </div>
 <!-- <h1>Hello World</h1> -->

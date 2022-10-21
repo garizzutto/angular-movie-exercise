@@ -1,4 +1,33 @@
 .movie-list {
   display: flex;
-  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  height: calc(100% - 14px);
+  margin: 5px 0;
+  background-color: rgba(0, 0, 0, 0.103);
+  border: 0px;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.right {
+  right: 0;
+}
+
+
+.movie-list-container {
+  position: relative;
 }

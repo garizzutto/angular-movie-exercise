@@ -1,0 +1,10 @@
+<div class="nav-bar">
+  <i (click)="toggleMenu()" class="fa-solid fa-bars"></i>
+  <a routerLink="/">Movied</a>
+
+  <ul [style]="showMenu ? 'display:block;' : 'display:none;'">
+    <li *ngFor="let category of categories">
+      <a type="button" (click)="clickCategory(category)">{{ category.name }}</a>
+    </li>
+  </ul>
+</div>

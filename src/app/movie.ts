@@ -25,7 +25,7 @@ export interface SingleMovie extends Movie {
   runtime: number,
   status: string,
   tagline: string,
-  genres: Genre[]
+  genres: Genre[],
 }
 
 interface ProductionCompanies {
@@ -39,3 +39,5 @@ interface Genre {
   id: number,
   name: string,
 }
+
+export interface Category extends Genre {}
